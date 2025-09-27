@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Node modules (if you ever use npm for frontend)
+node_modules/
+
+# Flask instance folder
+instance/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Pytest / testing
+.pytest_cache/
+
+# Misc
+*.bak
+*.swp
