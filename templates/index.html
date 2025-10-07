@@ -1,7 +1,29 @@
-<canvas id="gameCanvas" width="800" height="400"></canvas>
-<script src="{{ url_for('static', filename='js/engine.js') }}"></script>
-<script src="{{ url_for('static', filename='js/dino.js') }}"></script>
-<!-- <script src="{{ url_for('static', filename='js/obstacle.js') }}"></script> -->
-<script src="{{ url_for('static', filename='js/background.js') }}"></script>
-<script src="{{ url_for('static', filename='js/utils.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Dino Game</title>
+    </head>
+
+    <body>
+
+    <canvas id="gameCanvas"></canvas>
+
+
+    <!-- Inject the frame arrays first -->
+    <script>
+    // Use |tojson and |safe to make valid JS arrays
+    const runFrames = {{ run_frames|tojson | safe }};
+    const jumpFrames = {{ jump_frames|tojson | safe }};
+    </script>
+
+    <!-- Load JS scripts that use these arrays -->
+    <script src="{{ url_for('static', filename='js/dino.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/obstacle.js') }}"></script>
+
+    </body>
+</html>
